@@ -8,7 +8,7 @@
       <li> I'm a student studying at National Chiayi University.</li>
       <li> I'm currently working on <a href="https://github.com/Mioyunnn">Mio Code.</a></li>
       <li> I'm currently learning basic things about HTML, CSS, JS.</li>
-      <li> How to reach me <mailto:lion065030@gmail.com>lion065030@gmail.com</li>
+      <li> How to reach me <a href="mailto:lion065030@gmail.com">lion065030@gmail.com</li>
     </ul>
   </body>
 </html>
