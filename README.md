@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html>
   <head>
     <h1 align="center"><bold>Hello! I'm Mio Chen<bold></h1>
@@ -13,6 +12,3 @@
     </ul>
   </body>
 </html>
-=======
-# Mioyunnn.github.io
->>>>>>> 48987c947dd2ca3c8441f476baf0ccab4dfd529e
