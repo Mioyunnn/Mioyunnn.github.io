@@ -48,115 +48,71 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 });
-document.addEventListener('click', function(event) {
-    // 获取点击位置的坐标
-    const x = event.clientX;
-    const y = event.clientY;
+// 获取 canvas 元素和其上下文
+const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
 
-    // 创建粒子效果
-    particlesJS('particles-js', {
-      particles: {
-        number: {
-          value: 100, // 粒子数量
-          density: {
-            enable: true,
-            value_area: 800 // 粒子密度
-          }
-        },
-        color: {
-          value: '#000000' // 粒子颜色
-        },
-        shape: {
-          type: 'circle', // 粒子形状
-          stroke: {
-            width: 0,
-            color: '#000000'
-          },
-          polygon: {
-            nb_sides: 5
-          }
-        },
-        opacity: {
-          value: 0.5, // 粒子透明度
-          random: false,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false
-          }
-        },
-        size: {
-          value: 3, // 粒子大小
-          random: true,
-          anim: {
-            enable: false,
-            speed: 40,
-            size_min: 0.1,
-            sync: false
-          }
-        },
-        line_linked: {
-          enable: true,
-          distance: 150, // 粒子连接线的距离
-          color: '#000000',
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 6, // 粒子移动速度
-          direction: 'none',
-          random: false,
-          straight: false,
-          out_mode: 'out',
-          bounce: false,
-          attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200
-          }
-        }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: {
-            enable: true,
-            mode: 'repulse'
-          },
-          onclick: {
-            enable: true,
-            mode: 'push' // 点击时触发粒子推动效果
-          },
-          resize: true
-        },
-        modes: {
-          grab: {
-            distance: 400,
-            line_linked: {
-              opacity: 1
-            }
-          },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4
-          },
-          push: {
-            particles_nb: 4 // 点击时添加的粒子数量
-          },
-          remove: {
-            particles_nb: 2
-          }
-        }
-      },
-      retina_detect: true
-    });
+// 设置 canvas 的宽度和高度
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// 创建一个空数组来存储烟花粒子
+let particles = [];
+
+// 创建粒子类
+class Particle {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.vx = Math.random() * 2 - 1;
+    this.vy = Math.random() * 2 - 1;
+    this.gravity = 0.05;
+    this.alpha = 1;
+    this.color = `hsla(${Math.random() * 360}, 100%, 50%, ${this.alpha})`;
+  }
+
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
+    this.vy += this.gravity;
+    this.alpha -= 0.01;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.globalAlpha = this.alpha;
+    ctx.fill();
+  }
+}
+
+// 创建烟花效果
+function createFirework(x, y) {
+  for (let i = 0; i < 50; i++) {
+    particles.push(new Particle(x, y));
+  }
+}
+
+// 动画循环
+function animate() {
+  requestAnimationFrame(animate);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach((particle, index) => {
+    particle.update();
+    particle.draw();
+
+    if (particle.alpha <= 0) {
+      particles.splice(index, 1);
+    }
   });
+}
+
+// 监听页面的点击事件
+window.addEventListener("click", (e) => {
+  createFirework(e.clientX, e.clientY);
+});
+
+// 开始动画循环
+animate();
