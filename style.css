@@ -389,7 +389,7 @@ main{
 }
 @media(min-width: 1600px){
     main>.inner{
-        width: 73%;
+        width: 76%;
     }
 }
 
@@ -410,7 +410,9 @@ main>.inner{
     margin: 1rem 0;
     line-height: 1;
     height: 0;
-    font-weight: 700;
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
     text-transform: uppercase;
     letter-spacing: .05rem;
     user-select: none;
@@ -434,7 +436,7 @@ main>.inner{
     top: 50%;
     width: 50%;
     background-repeat: no-repeat;
-    background-image: url(https://cdn.jsdelivr.net/gh/Mioyunnn/Mioyunnn.github.io@master/line.png);
+    background-image: url(https://cdn.jsdelivr.net/gh/Mioyunnn/Mioyunnn.github.io@master/websiteicon/line.png);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: Mulish, 'Noto Serif SC', 'Noto Serif JP', 
