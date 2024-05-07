@@ -730,6 +730,10 @@ body.loaded #sidebar .panel.active {
     box-shadow: 0 .625rem 1.875rem -.9375rem var(--box-bg-shadow);
     transition: all .2s ease-in-out 0s;
 }
+.segments>.item:hover{
+    box-shadow: 0 .625rem 2rem -.10075rem var(--box-bg-shadow);
+
+}
 .segments>.item{
     position: relative;
     color: inherit;
@@ -753,6 +757,11 @@ body.loaded #sidebar .panel.active {
     border-radius: .625rem 0 0 .625rem;
     overflow: hidden;
     transition: all .2s ease-in-out 0s;
+    transition: width 0.3s ease;
+}
+.segments:hover .cover{
+    width: 40%;
+    opacity: 0.8;
 }
 .segments .cover img{
     object-fit: cover;
@@ -763,9 +772,24 @@ body.loaded #sidebar .panel.active {
 .segments .info{
     position: relative;
     width: 50%;
-    padding: 2rem 3rem 5rem 0;
+    padding: 0.5rem 1.5rem 3rem 0;
     perspective: 62.5rem;
     transition: all .2s ease-in-out 0s;
+}
+.segments:hover .info{
+    width: 60%;
+}
+.segments .info .meta{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+.index.wrap .meta{
+    font-size: .8125em;
+    color: var(--grey-5);
+}
+.index.wrap .meta .item+.item{
+    margin-left: .625rem;
 }
 .segments .info h3 {
     text-overflow: ellipsis;
