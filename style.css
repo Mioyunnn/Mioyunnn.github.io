@@ -173,6 +173,7 @@ header{
 }
 body{
     background: linear-gradient(to top, black 0, grey 20%) no-repeat bottom;
+    color: var(--text-color);
     font-size: 1em;
     line-height: 2;
     -webkit-font-smoothing: antialiased;
@@ -799,6 +800,34 @@ body.loaded #sidebar .panel.active {
     color: var(--primary-color);
     transition: margin-top .8s;
     font-size: 1.25em;
+}
+.segments>.item:hover .info h3{
+    margin-top: 0;
+}
+.segments .info .excerpt{
+    overflow: hidden;
+    font-size: .875em;
+    max-height: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s ease-in-out 0s;
+}
+.segments>.item:hover .excerpt{
+    opacity: 1;
+}
+.excerpt>ul{
+    padding-left: 0;
+}
+.segments>.item:hover .h3{
+    margin-top: 0;
+}
+:not(pre)>code{
+    color: var(--primary-color);
+    border-radius: .3rem;
+    border: .0625rem solid rgba(0, 0, 0, .1);
+    background-color: var(--grey-0);
+    padding: .2rem .3rem;
+    word-wrap: break-word;
 }
 [data-theme=dark] .info {
     --note-border: rgba(85,98,132,0.8);

@@ -11,6 +11,11 @@ angleIcon.addEventListener('click', function() {
     mainSection.scrollIntoView({ behavior: 'smooth' });
 });
 
+window.addEventListener('scroll', function() {
+    var scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    var translateY = Math.min(0, -2 * Math.floor(scrollPercentage / 2));
+    document.getElementById('imgs').style.transform = 'translate3d(0, ' + translateY + 'vh, 0)';
+});
 
 // 获取导航栏和主内容区域的元素
 const nav = document.getElementById('nav');
@@ -39,6 +44,7 @@ window.addEventListener('scroll', function() {
         nav.style.transform = 'translateY(0)';
     }
 });
+
 document.addEventListener('DOMContentLoaded', function () {
     var mySwiper = new Swiper('.swiper-container', {
         direction: 'vertical', // 设置垂直方向滑动
