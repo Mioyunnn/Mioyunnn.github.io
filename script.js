@@ -13,7 +13,7 @@ angleIcon.addEventListener('click', function() {
 
 window.addEventListener('scroll', function() {
     var scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-    var translateY = Math.min(0, -2 * Math.floor(scrollPercentage / 2));
+    var translateY = Math.max(-20, Math.min(0, -0.3 * Math.floor(scrollPercentage / 1)));
     document.getElementById('imgs').style.transform = 'translate3d(0, ' + translateY + 'vh, 0)';
 });
 

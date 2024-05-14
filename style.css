@@ -671,11 +671,6 @@ body.loaded #sidebar .panel.active {
 #quick li .bx{
     cursor: pointer;
 }
-@media (max-width:1200px) {
-    #footer>.inner{
-        padding-left: 0;
-    }
-}
 #footer {
     color: var(--grey-5);
     font-size: .875rem;
@@ -685,6 +680,11 @@ body.loaded #sidebar .panel.active {
     margin: 0 auto;
     position: relative;
     padding-left: 16.25rem;
+}
+@media (max-width:1200px) {
+    #footer>.inner{
+        padding-left: 0;
+    }
 }
 .widgets{
     display: flex;
