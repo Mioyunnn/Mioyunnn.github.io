@@ -10,6 +10,16 @@ angleIcon.addEventListener('click', function() {
     // 使用 scrollIntoView() 方法将目标元素滚动到可视区域
     mainSection.scrollIntoView({ behavior: 'smooth' });
 });
+const toolIcon = document.getElementById('tool');
+
+// 添加点击事件监听器
+toolIcon.addEventListener('click', function() {
+    // 获取要滚动到的目标元素（这里假设目标元素的 ID 是 'header'）
+    const headerSection = document.getElementById('header');
+
+    // 使用 scrollIntoView() 方法将目标元素滚动到可视区域
+    headerSection.scrollIntoView({ behavior: 'smooth' });
+});
 
 window.addEventListener('scroll', function() {
     var scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
@@ -52,5 +62,20 @@ document.addEventListener('DOMContentLoaded', function () {
         autoplay: {
             delay: 4000, // 自动播放间隔时间
         },
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    var main = document.getElementById("main");
+    var tool = document.getElementById("tool");
+
+    var mainOffsetTop = main.offsetTop;
+    var toolOffsetTop = tool.offsetTop;
+
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset >= mainOffsetTop && window.pageYOffset < toolOffsetTop) {
+            tool.classList.add("affix");
+        } else {
+            tool.classList.remove("affix");
+        }
     });
 });

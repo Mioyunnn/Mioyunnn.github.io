@@ -119,6 +119,25 @@ div{
         opacity: 0;
     }
 }
+#tool{
+    position: fixed;
+    top: 90vh;
+    right: 1rem;
+    z-index: 9;
+    cursor: pointer;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
+    background: var(--grey-1-a3);
+    border-radius: .3125rem; /* 下次從這邊 */
+}
+#tool.affix{
+    text-shadow: none;
+    top: auto;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
+    background: var(--grey-1-a3);
+    border-radius: .3125rem;
+    right: 0;
+    bottom: 0;
+}
 #angle{
     position: absolute;
     bottom: 3vh;
@@ -469,6 +488,7 @@ h2{
     bottom: 0;
     /* 動畫 */
 }
+
 #sidebar>.inner{
     position: relative;
     width: 15rem;
@@ -519,7 +539,6 @@ body.loaded #sidebar .panel.active {
     box-shadow: 0 0 9px .3rem var(--body-bg-shadow);
     border-radius: 50%;
 }
-
 .overview .author .image:hover{
     animation: rotateimg 0.7s forwards;
 }
