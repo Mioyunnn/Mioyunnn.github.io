@@ -123,20 +123,50 @@ div{
     position: fixed;
     top: 90vh;
     right: 1rem;
-    z-index: 9;
+    z-index: 9;/* 下次從這邊 */
+}
+#tool .item{
+    display: none;
+    width: 1.875rem;
+    height: 1.875rem;
+    opacity: .5;
     cursor: pointer;
-    box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
-    background: var(--grey-1-a3);
-    border-radius: .3125rem; /* 下次從這邊 */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .2 ease-in-out 0s;
+}
+#tool .play-button{
+    display: inline-flex;
+    flex-direction: row-reverse;
+    font-size: 1.5em;
+    width: auto;
+    height: auto;
 }
 #tool.affix{
     text-shadow: none;
     top: auto;
-    box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
-    background: var(--grey-1-a3);
+    padding-top: 5px;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.1);
+    background: var(--grey-1);
     border-radius: .3125rem;
-    right: 0;
     bottom: 0;
+}
+#tool .back-to-top span {
+    font-size: .05em;
+    font-family: "Kiwi Maru", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+#tool.affix .item{
+    display: flex;
+    color: var(--primary-color);
+}
+#tool.affix .back-to-top{
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: .3125rem 0 0;
 }
 #angle{
     position: absolute;

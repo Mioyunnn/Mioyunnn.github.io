@@ -68,14 +68,44 @@ document.addEventListener("DOMContentLoaded", function() {
     var main = document.getElementById("main");
     var tool = document.getElementById("tool");
 
-    var mainOffsetTop = main.offsetTop;
-    var toolOffsetTop = tool.offsetTop;
+    // 定義一個函數來檢查 tool 和 main 之間的位置關係
+    function checkPosition() {
+        var mainRect = main.getBoundingClientRect();
+        var toolRect = tool.getBoundingClientRect();
 
-    window.addEventListener("scroll", function() {
-        if (window.pageYOffset >= mainOffsetTop && window.pageYOffset < toolOffsetTop) {
+        // 檢查 tool 是否碰觸到 main
+        if (toolRect.bottom > mainRect.top && toolRect.top) {
             tool.classList.add("affix");
         } else {
             tool.classList.remove("affix");
         }
+    }
+
+    // 綁定 scroll 事件，並在頁面加載時檢查一次
+    window.addEventListener("scroll", checkPosition);
+    checkPosition();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // 监听滚动事件
+    window.addEventListener("scroll", function() {
+        // 获取页面总高度
+        var totalHeight = document.body.scrollHeight - window.innerHeight;
+        
+        // 获取当前滚动位置
+        var scrollPosition = window.pageYOffset;
+        
+        // 计算滚动进度
+        var scrollProgress = (scrollPosition / totalHeight) * 100;
+        
+        // 可以将滚动进度四舍五入到整数
+        scrollProgress = Math.round(scrollProgress);
+        document.getElementById("progress").textContent = + scrollProgress + "%";
+        // 在控制台输出滚动进度
+        
+        
+        // 或者您可以将滚动进度显示在页面的某个元素上
+        // 例如，如果有一个元素具有 id="progress"，您可以使用以下代码将进度显示在该元素上：
+        // document.getElementById("progress").textContent = "滚动进度：" + scrollProgress + "%";
     });
 });
