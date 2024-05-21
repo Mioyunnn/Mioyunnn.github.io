@@ -10,15 +10,11 @@ angleIcon.addEventListener('click', function() {
     // 使用 scrollIntoView() 方法将目标元素滚动到可视区域
     mainSection.scrollIntoView({ behavior: 'smooth' });
 });
-const toolIcon = document.getElementById('tool');
-
-// 添加点击事件监听器
-toolIcon.addEventListener('click', function() {
-    // 获取要滚动到的目标元素（这里假设目标元素的 ID 是 'header'）
-    const headerSection = document.getElementById('header');
-
-    // 使用 scrollIntoView() 方法将目标元素滚动到可视区域
-    headerSection.scrollIntoView({ behavior: 'smooth' });
+document.querySelector('.back-to-top').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
 
 window.addEventListener('scroll', function() {

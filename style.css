@@ -809,7 +809,7 @@ body.loaded #sidebar .panel.active {
     transition: all .2s ease-in-out 0s;
     transition: width 0.3s ease;
 }
-.segments:hover .cover{
+.segments>.item:hover .cover{
     width: 40%;
     opacity: 0.8;
 }
@@ -826,7 +826,7 @@ body.loaded #sidebar .panel.active {
     perspective: 62.5rem;
     transition: all .2s ease-in-out 0s;
 }
-.segments:hover .info{
+.segments>.item:hover .info{
     width: 60%;
 }
 .segments .info .meta{
@@ -871,12 +871,39 @@ body.loaded #sidebar .panel.active {
     margin-top: 0;
 }
 :not(pre)>code{
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
     color: var(--primary-color);
     border-radius: .3rem;
     border: .0625rem solid rgba(0, 0, 0, .1);
     background-color: var(--grey-0);
     padding: .2rem .3rem;
     word-wrap: break-word;
+}
+.segments>.item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.segments>.item:nth-child(even) .cover{
+    margin-right: auto;
+    margin-left: 1.5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);;
+    border-radius: .625rem 0 0 .625rem;
+}
+.segments>.item.item:nth-child(even):hover .cover{
+    width: 40%;
+    opacity: 0.8;
+}
+.segments>.item:nth-child(even) .info{
+    padding: 1rem 0 3rem 1.5rem;
+}
+.segments>.item:nth-child(even):hover .info{
+    width: 60%;
+}
+.segments>.item:nth-child(even) .info .meta{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
 }
 [data-theme=dark] .info {
     --note-border: rgba(85,98,132,0.8);
