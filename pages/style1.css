@@ -242,7 +242,9 @@ body.loaded #sidebar .panel.active {
     justify-content: center;
     padding: 3rem 5rem 0;
     text-align: center;
-    font-family: 'Fredericka the Great', sans-serif;
+    font-family: "Kiwi Maru", serif;
+    font-weight: 700;
+    font-style: normal;
     font-size:1em;
     width: 100%;
     height: 80vh;
@@ -456,37 +458,20 @@ main>.inner{
     position: relative;
     padding: 1.25rem;
 }
-.divider{
-    margin: 1rem 0;
-    line-height: 1;
-    height: 0;
-    font-family: "Kiwi Maru", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: .05rem;
-    user-select: none;
+.cake{
+    display: inline-flex;
+    font-size: .8rem;
+    margin: 1.25rem 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cake .bx:nth-child(1) {
+    margin-left: 0;
+    margin-right: .3125rem;
+}
+.cake .bx{
+    margin:0 .125rem;
     color: var(--grey-4);
-    display: table;
-    white-space: nowrap;
-    height: auto;
-    line-height: 1;
-    text-align: center;
-}
-.divider::before{
-    background-position: right 1rem top 50%;
-}
-.divider::after{
-    background-position: left 1rem top 50%;
-}
-.divider::after, .divider::before{
-    content:'';
-    display: table-cell;
-    position: relative;
-    top: 50%;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-image: url(https://cdn.jsdelivr.net/gh/Mioyunnn/Mioyunnn.github.io@master/websiteicon/line.png);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: Mulish, 'Noto Serif SC', 'Noto Serif JP', 
@@ -761,256 +746,4 @@ body.loaded #sidebar .panel.active {
     100%{
         transform: rotate(360deg);
     }
-}
-.segments{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.cards .item.show, .segments>.item.show {
-    opacity: 1;
-}
-.segments>.item {
-    display: flex;
-    border-radius: .625rem;
-    width: calc(100% - 2rem);
-    min-width: calc(100% - 2rem);
-    border-radius: .5rem;
-    box-shadow: 0 .625rem 1.875rem -.9375rem var(--box-bg-shadow);
-    transition: all .2s ease-in-out 0s;
-}
-.segments>.item:hover{
-    box-shadow: 0 .625rem 2rem -.10075rem var(--box-bg-shadow);
-
-}
-.segments>.item{
-    position: relative;
-    color: inherit;
-    width: 100%;
-    min-width: calc(50% - 2rem);
-    height: 14rem;
-    margin: 1rem;
-}
-.cards .game-container{
-    position: relative;
-    color: inherit;
-    width: calc(50% - 2rem);
-    min-width: calc(50% - 2rem);
-    height: 14rem;
-    margin: 1rem;
-}
-.segments .cover {
-    width: 50%;
-    margin-right: 1.5rem;
-    clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
-    border-radius: .625rem 0 0 .625rem;
-    overflow: hidden;
-    transition: all .2s ease-in-out 0s;
-    transition: width 0.3s ease;
-}
-.segments>.item:hover .cover{
-    width: 40%;
-    opacity: 0.8;
-}
-.segments .cover img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-}
-.segments .info{
-    position: relative;
-    width: 50%;
-    padding: 0.5rem 1.5rem 3rem 0;
-    perspective: 62.5rem;
-    transition: all .2s ease-in-out 0s;
-}
-.segments>.item:hover .info{
-    width: 60%;
-}
-.segments .info .meta{
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-}
-.index.wrap .meta{
-    font-size: .8125em;
-    color: var(--grey-5);
-}
-.index.wrap .meta .item+.item{
-    margin-left: .625rem;
-}
-.segments .info h3 {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 3.525rem 0 0 0;
-    color: var(--primary-color);
-    transition: margin-top .8s;
-    font-size: 1.25em;
-}
-.segments>.item:hover .info h3{
-    margin-top: 0;
-}
-.segments .info .excerpt{
-    overflow: hidden;
-    font-size: .875em;
-    max-height: 6rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .2s ease-in-out 0s;
-}
-.segments>.item:hover .excerpt{
-    opacity: 1;
-}
-.excerpt>ul{
-    padding-left: 0;
-}
-.segments>.item:hover .h3{
-    margin-top: 0;
-}
-:not(pre)>code{
-    font-family: "Kiwi Maru", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--primary-color);
-    border-radius: .3rem;
-    border: .0625rem solid rgba(0, 0, 0, .1);
-    background-color: var(--grey-0);
-    padding: .2rem .3rem;
-    word-wrap: break-word;
-}
-.segments>.item:nth-child(even) {
-    flex-direction: row-reverse;
-}
-.segments>.item:nth-child(even) .cover{
-    margin-right: auto;
-    margin-left: 1.5rem;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);;
-    border-radius: .625rem 0 0 .625rem;
-}
-.segments>.item.item:nth-child(even):hover .cover{
-    width: 40%;
-    opacity: 0.8;
-}
-.segments>.item:nth-child(even) .info{
-    padding: 1rem 0 3rem 1.5rem;
-}
-.segments>.item:nth-child(even):hover .info{
-    width: 60%;
-}
-.segments>.item:nth-child(even) .info .meta{
-    display: flex;
-    justify-content: flex-start;
-    margin: 0;
-}
-[data-theme=dark] .info {
-    --note-border: rgba(85,98,132,0.8);
-    --note-bg: rgba(48,49,50,0.8);
-    --note-text: rgba(109,164,219,0.8);
-    --note-hover: rgba(39,127,214,0.8);
-}
-#notice{
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    color: var(--grey-6);
-    background-color: var(--grey-4);
-    padding: 1rem .5rem 1rem .5rem;
-    border-radius: 8px;
-    cursor: pointer;
-}
-#notice span{
-    color: red;
-    font-family: "Kiwi Maru", serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.25em;
-    white-space: nowrap;
-}
-#notice .bx-info-circle{
-    color: red;
-    font-size: 1.25em;
-}
-#noticelist{
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-}
-.swiper-container{
-    display: flex;
-    text-align: center;
-    margin: 0 auto;
-    padding-right: 90px;
-    height: 30px;
-}
-.swiper-wrapper{
-    font-family: "Kiwi Maru", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--color-yellow);
-}
-.swiper-wrapper:hover{
-    color: var(--color-red);
-    transition: color 0.2s ease-in;
-}
-.cards{
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.cards .game-container{
-    display: block !important;
-}
-.cards .game-container {
-    perspective: 62.5rem;
-}
-.cards .game-container .game-cover,.cards .game-container .game-info {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: .375rem;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    }
-    
-.cards .game-container .game-cover {
-    background-position: center;
-    background-size: cover;
-    padding: .5rem 1rem;
-    font-size: 1em;
-    color: var(--header-text-color);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-.cards .game-container:hover .game-cover {
-    transform: scale(1.05);
-}
-.cards .game-container .game-cover::after{
-    background-color: var(--grey-8);
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    rotate: 45deg;
-    scale: 1.2;
-    opacity: 0.3;
-    transform: translateY(-500px);
-    transition: transform 0.8s ease;
-}
-.cards .game-container:hover .game-cover::after {
-    transform: translateY(500px);
 }
