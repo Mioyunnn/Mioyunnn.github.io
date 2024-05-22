@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 *{
     box-sizing: border-box;
@@ -473,6 +474,27 @@ main>.inner{
     margin:0 .125rem;
     color: var(--grey-4);
 }
+.post.block{
+    padding: 0 2rem;
+}
+.md{
+    font-family: Mulish, -apple-system, "PingFang SC", "Microsoft Yahei", sans-serif;
+    word-wrap: break-word;
+}
+.md ul{
+    margin: 0 0 .8em;
+    padding: .1em .2em .1em 1.4em;
+}
+.md ul>li::before {
+    content: "";
+    position: absolute;
+    width: .4em;
+    height: .4em;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: .85em;
+    left: -1em;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: Mulish, 'Noto Serif SC', 'Noto Serif JP', 
     Mulish, -apple-system,"PingFang SC", 
@@ -686,17 +708,7 @@ body.loaded #sidebar .panel.active {
 .overview .menu .item .bx{
     margin-right: 0.625rem;
 }
-#nav .menu .submenu .item.active,
- #nav .menu .submenu .item:hover,
-  #search-pagination .current .page-number,
-   #sidebar .tab .item.active, #sidebar .tab .item:hover,
-    .overview .menu .item.active, .pagination .next:hover,
-     .pagination .page-number.current,
- .pagination .page-number:hover, .pagination .prev:hover {
-    color: var(--grey-0);
-    background-image: linear-gradient(to right, #fe784f 0, #e99f6e 100%);
-    box-shadow: 0 0 .75rem var(--color-pink-a3);
-}
+
 #quick li{
     width: 25%;
     min-height: 1.875rem;
