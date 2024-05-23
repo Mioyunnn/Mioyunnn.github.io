@@ -510,6 +510,11 @@ h2{
     font-weight: bold;
     unicode-bidi: isolate;
 }
+p{
+    font-family: "Kiwi Maru", serif;
+    font-weight: 700;
+    font-style: normal;
+}
 @media (max-width: 1200px) {
     #sidebar {
         display: none;
