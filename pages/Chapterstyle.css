@@ -495,6 +495,23 @@ main>.inner{
     left: 3em;
     transform: translateY(230%);
 }
+.literature.title {
+    color: var(--color-blue);
+    border-radius: .3rem;
+    border: .0625rem solid rgba(0, 0, 0, .1);
+    background-color: var(--grey-0);
+    padding: .2rem .3rem;
+}
+.note>p {
+    font-weight: 300;
+}
+.body.md[itemprop="articlebody"] ul li code {
+    color: var(--primary-color);
+    border-radius: .3rem;
+    border: .0625rem solid rgba(0, 0, 0, .1);
+    background-color: var(--grey-2);
+    padding: .2rem .3rem;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: Mulish, 'Noto Serif SC', 'Noto Serif JP', 
     Mulish, -apple-system,"PingFang SC", 
