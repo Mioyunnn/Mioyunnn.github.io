@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
 *{
     box-sizing: border-box;
@@ -502,8 +503,18 @@ main>.inner{
     background-color: var(--grey-0);
     padding: .2rem .3rem;
 }
+.note-title{
+    font-weight: 700;
+    background-color: rgba(104, 67, 25, 0.74) ;
+
+}
 .note>p {
     font-weight: 300;
+}
+.creativity.note{
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 .body.md[itemprop="articlebody"] ul li code {
     color: var(--primary-color);
