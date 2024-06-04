@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
 
 *{
     box-sizing: border-box;
@@ -509,7 +510,8 @@ main>.inner{
 
 }
 .note>p {
-    font-family: "Kosugi Maru", sans-serif;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
@@ -524,6 +526,12 @@ main>.inner{
     border: .0625rem solid rgba(0, 0, 0, .1);
     background-color: var(--grey-2);
     padding: .2rem .3rem;
+}
+.body.md[itemprop="articlebody"] ul li{
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: Mulish, 'Noto Serif SC', 'Noto Serif JP', 

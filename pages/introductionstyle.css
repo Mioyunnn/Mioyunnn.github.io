@@ -526,6 +526,19 @@ hr {
     float: right;
     margin-left: .625rem;
 }
+.body.md[itemprop="articlebody"] ul li code {
+    color: var(--primary-color);
+    border-radius: .3rem;
+    border: .0625rem solid rgba(0, 0, 0, .1);
+    background-color: var(--grey-2);
+    padding: .2rem .3rem;
+}
+.body.md[itemprop="articlebody"] ul li{
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: Mulish, 'Noto Serif SC', 'Noto Serif JP', 
     Mulish, -apple-system,"PingFang SC", 

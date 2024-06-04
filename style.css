@@ -493,6 +493,12 @@ h1, h2, h3, h4, h5, h6 {
     Mulish, -apple-system,"PingFang SC", 
     "Microsoft YaHei", sans-serif;
 }
+h3 {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
 h2{
     display: block;
     font-size: 1.5em;
@@ -820,6 +826,10 @@ body.loaded #sidebar .panel.active {
     opacity: 0.8;
 }
 .segments .info{
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     position: relative;
     width: 50%;
     padding: 0.5rem 1.5rem 3rem 0;
@@ -871,8 +881,9 @@ body.loaded #sidebar .panel.active {
     margin-top: 0;
 }
 :not(pre)>code{
-    font-family: "Kiwi Maru", serif;
-    font-weight: 400;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
     color: var(--primary-color);
     border-radius: .3rem;
