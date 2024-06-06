@@ -638,7 +638,7 @@ body.loaded #sidebar .panel.active {
     color: #4375ff;
     transition: color 0.2s ease-in;
 }
-.state .item .count{
+#articlecount, #categorycount, #tagcount{
     display: block;
     font-size: 1.25em;
     font-weight: 600;

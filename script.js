@@ -145,3 +145,12 @@ function fetchPageAndCountWords(url, elementId) {
           fetchPageAndCountWords(url, elementIds[index]);
 });
 
+function countArticles() {
+    const articles = document.querySelectorAll('article');
+    const articleCount = articles.length;
+    document.getElementById('articlecount').innerText = articleCount;
+}
+
+// 計算主頁面的文章數量
+countArticles();
+
