@@ -516,8 +516,9 @@ main>.inner{
     font-style: normal;
 }
 .creativity.note{
-    font-family: "Kosugi Maru", sans-serif;
-    font-weight: 300;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
     font-style: normal;
 }
 .body.md[itemprop="articlebody"] ul li code {

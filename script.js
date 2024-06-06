@@ -105,3 +105,43 @@ document.addEventListener("DOMContentLoaded", function() {
         // document.getElementById("progress").textContent = "滚动进度：" + scrollProgress + "%";
     });
 });
+
+function countWords(text) {
+    return text.trim().split(/\s+/).length;
+}
+
+function formatWordCount(wordCount) {
+    if (wordCount >= 1000) {
+        return (wordCount / 1000).toFixed(1) + 'k';
+    }
+    return wordCount.toString();
+}
+
+function updateWordCount(elementId, wordCount) {
+    document.getElementById(elementId).innerText = formatWordCount(wordCount) + '字';
+}
+
+function fetchPageAndCountWords(url, elementId) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const content = doc.body.innerText;
+            const wordCount = countWords(content);
+            updateWordCount(elementId, wordCount);
+        })
+        .catch(error => {
+            console.error('Error fetching the page:', error);
+            updateWordCount('無法計算字數');
+        });
+}
+      // 分頁URL列表
+      const pageUrls = ['http://127.0.0.1:5500/pages/introduction.html','http://127.0.0.1:5500/pages/Ch1.html', 'http://127.0.0.1:5500/pages/Ch2.html', 'http://127.0.0.1:5500/pages/Ch3.html'];
+      const elementIds = ['wordCount0','wordCount1', 'wordCount2', 'wordCount3'];
+
+      // 遍歷所有分頁URL並計算字數
+      pageUrls.forEach((url, index) => {
+          fetchPageAndCountWords(url, elementIds[index]);
+});
+
