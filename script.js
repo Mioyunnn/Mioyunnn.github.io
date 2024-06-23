@@ -137,7 +137,7 @@ function fetchPageAndCountWords(url, elementId) {
         });
 }
       // 分頁URL列表
-      const pageUrls = ['http://127.0.0.1:5500/pages/introduction.html','http://127.0.0.1:5500/pages/Ch1.html', 'http://127.0.0.1:5500/pages/Ch2.html', 'http://127.0.0.1:5500/pages/Ch3.html'];
+      const pageUrls = ['https://mioyunnn.github.io/pages/introduction.html','https://mioyunnn.github.io/pages/Ch1.html', 'https://mioyunnn.github.io/pages/Ch2.html', 'https://mioyunnn.github.io/pages/Ch3.html'];
       const elementIds = ['wordCount0','wordCount1', 'wordCount2', 'wordCount3'];
 
       // 遍歷所有分頁URL並計算字數
