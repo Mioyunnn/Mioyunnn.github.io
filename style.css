@@ -127,7 +127,7 @@ div {
   position: fixed;
   top: 90vh;
   right: 1rem;
-  z-index: 9; /* 下次從這邊 */
+  z-index: 9;
 }
 #tool .item {
   display: none;
@@ -543,6 +543,7 @@ h2 {
   width: 15rem;
   top: 0;
   bottom: 0;
+  z-index: 99;
   /* 動畫 */
 }
 
@@ -971,6 +972,10 @@ body.loaded #sidebar .panel.active {
   color: red;
   font-size: 1.25em;
 }
+.trumpet a{
+  display: flex;
+  align-items: center;
+}
 #noticelist {
   margin-left: auto;
   margin-right: auto;
@@ -1052,4 +1057,42 @@ body.loaded #sidebar .panel.active {
 }
 .cards .game-container:hover .game-cover::after {
   transform: translateY(500px);
+}
+@media (max-width: 768px){
+  #tool{
+    display: none;
+  }
+  nav{
+    display: none;
+  }
+  #brand h1{
+    font-size: 19px;
+  }
+  #brand .artboard{
+    font-size: 50px;
+    width: 5em;
+  }
+  .meta span{
+    font-size: 0.66rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .cards .game-container{
+    width: 100%;
+  }
+  a{
+    font-size: .8em;
+  }
+  *{
+    scrollbar-width: none;
+  }
+  .divider{
+    font-size: .95em;
+  }
+  #notice{
+    display: none;
+  }
+  #footer{
+    font-size: .75em;
+    margin-bottom: 1em;
+  }
 }
