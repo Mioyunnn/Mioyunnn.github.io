@@ -54,6 +54,9 @@ div{
     z-index: -9;
     background-color: #363636;
 }
+#imgs img{
+    object-fit: cover;
+}
 #imgs::before {
     content: '';
     display: block;
@@ -803,3 +806,42 @@ body.loaded #sidebar .panel.active {
         transform: rotate(360deg);
     }
 }
+@media (max-width: 768px){
+    #tool{
+      display: none;
+    }
+    nav{
+      display: none;
+    }
+    #brand h1{
+      font-size: 19px;
+    }
+    #brand .artboard{
+      font-size: 4em;
+      width: 100%;
+    }
+    .meta span{
+      font-size: 0.66rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .cards .game-container{
+      width: 100%;
+    }
+    a{
+      font-size: .8em;
+    }
+    *{
+      scrollbar-width: none;
+    }
+    .divider{
+      font-size: .95em;
+    }
+    #notice{
+      display: none;
+    }
+    #footer{
+      font-size: .75em;
+      margin-bottom: 1em;
+    }
+  }
+  
