@@ -997,6 +997,7 @@ body.loaded #sidebar .panel.active {
   font-weight: 400;
   font-style: normal;
   color: var(--color-yellow);
+  text-align: center;
 }
 .swiper-wrapper:hover {
   color: var(--color-red);
